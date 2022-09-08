@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo</title>
+  </head>
+  <body>
+    <h1>Seja bem vindo!</p>
+    <p>Data <%= data_br(Time.now) %></p>
+    <%= render "menu"%>
+
+    <p>Você está em ambiente de <%=ambiente_rails%></p>
+    <p>Seja bem Vindo <%= @meu_nome%></p>
+    <p>Você está fazendo um curso de <%=@curso%></p>
+  </body>
+</html>

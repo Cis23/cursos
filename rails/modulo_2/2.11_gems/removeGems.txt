@@ -1,0 +1,16 @@
+remover uma gem;
+  gem uninstall <nomeDaGem>
+    EX: gem uninstall rails'
+
+instala uma gem informando a versão específica
+  gem install nomeDaGem -v x.x.x
+
+remove versões antigas da gem
+  gem cleanup
+
+remove versão antigas de uma gem determinada;
+  gem cleanup nomeDaGem
+
+verifica versões que serão apagadas;
+  gem cleanup -d;
+

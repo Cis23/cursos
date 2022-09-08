@@ -1,0 +1,9 @@
+usuarios = {}
+
+print "Informe o seu nome: ";
+usuarios[:nome] = gets.chomp;
+
+print "Informe o seu sobrenome: ";
+usuarios[:sobrenome] = gets.chomp;
+
+puts "Seja Bem Vindo, #{usuarios[:nome]} #{usuarios[:sobrenome]}"

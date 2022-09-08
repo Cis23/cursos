@@ -1,0 +1,11 @@
+Protocolo HTTP(Hyper Text Transfer Protocol): Protocolo de comunicação universal entre máquinas, utilimos o protocolo HTTP:
+Verbos principais: GET, POST, PUT/PATCH, DELETE
+
+## comando para definir a página index padrão: root to: "welcome#index"
+
+resources: Coins # Cria as rotas padrão para cada recurso, e uma view para o recurso que corresponde a ela, como por exemplo a view para cadastro(POST), coletar os dados para exibir(GET), editar as informações do dado cadastrado(PUT/PATCH), exclusão dos dados(DELETE).
+
+# Criando uma rota na mão: 
+	verbo "/controler(pluralizado)", to: "controler#index" # cria uma rota baseada no controler
+		EX: GET "/coins", to: "coins/index"
+Documentação: https://guides.rubyonrails.org/routing.html

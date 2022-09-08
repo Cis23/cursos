@@ -1,0 +1,10 @@
+sintaxe:
+
+gem 'lerolero'; o sistema vai entender que queremos a versão mais recente da gem;
+
+gem 'lerolero'  , '1.0.1';
+gem 'cpf_utils' , '>=1.0.0';
+        maior ou igual a versão especificada;
+
+gem 'faker', '~>1.6.0';
+        uma versão aproximada a versão especificada

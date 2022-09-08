@@ -1,0 +1,3 @@
+# Proptypes é uma objeto que serve para especificar valores para o tipo da props
+# Devemos importa-lo: import PropTypes from 'prop-types'
+

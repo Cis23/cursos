@@ -1,0 +1,32 @@
+<%= form_with(model: coin, local: true) do |form| %>
+  <% if coin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul> 
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Nome da moeda: " %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Sigla: " %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Endereço da imagem: " %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

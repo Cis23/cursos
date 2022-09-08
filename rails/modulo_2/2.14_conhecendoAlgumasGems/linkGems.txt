@@ -1,0 +1,11 @@
+Lero-Lero Generator;
+   https://github.com/jacksonpires/lerolero_generator
+
+cpf_utils;
+  https://github.com/jacksonpires/cpf_utils;
+
+Documentos BR;
+  https://github.com/jacksonpires/documentos_br
+
+TTY Toolbox;
+  http://piotrmurach.gitgub.io/tty/

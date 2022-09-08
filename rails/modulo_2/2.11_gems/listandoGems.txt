@@ -1,0 +1,13 @@
+Mostrar as gems instaladas localmente;
+  gem list
+
+pesquisa aproximada(localmente);
+  gem list nomeDaGem
+
+pesquisa aproximada (remotamente)
+  gem list nomeDaGem --remote
+
+pesquisa aproximada(remotamente para todas as versões)
+  gem list nomeDaGem --remote --all
+
+

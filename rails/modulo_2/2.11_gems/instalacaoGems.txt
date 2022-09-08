@@ -1,0 +1,6 @@
+Instalação Básica de uma gem;
+  gem install nomeDaGem
+
+instala uma gem em uma versão expecífica;
+  gem install nomeDaGem -v <versão>
+    EX: gem install RAILS -v 4.2.3

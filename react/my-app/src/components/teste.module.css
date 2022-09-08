@@ -1,0 +1,14 @@
+.container{
+  background-color: #fefefe;
+  margin: 0 auto;
+  width: 80%;
+  /* border: 1px solid red; */
+  transition: background 2s ease-out;
+}
+.container:hover{
+  transform: scale(1.01);
+  box-shadow: 
+    2px 2px 4px #525252,
+    -2px -2px 4px #525252
+    ;
+}

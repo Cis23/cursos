@@ -1,0 +1,2 @@
+No controler podemos setar qual layout queremos usar, caso não coloquemos nada, a aplicação utilizarar por padrão, o layout aplication 
+Ex: <layout "nomeLayout">

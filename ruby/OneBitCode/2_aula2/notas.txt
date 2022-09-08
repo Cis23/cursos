@@ -1,0 +1,14 @@
+#TIPOS DE DADOS:
+  Integer
+  Float
+  Boolean
+  String
+  Array
+  Symbol: É um tipo de dado semeplhante a String, como a diferença de que ele é um objeto imutável.
+         Duas strings idênticas podem ser objetos diferentes, mas símbolos é apenas um objeto, ocupando sempre o mesmo espaço na memória. Um Simbolo é definido começando com o dois pontos: seguido de seu número;
+         Sintaxe Symbol: variavel_symbol = :nomeVariavel;
+  Hash: Funciona como um objeto.
+        Sintaxe Hash: variavel_hash = {exemplo1: "valor",exemplo2: "valor2"}
+        Para acessar um dos valores do hash: variavel_hash[:exemplo1];
+        Para gurdar valores dentro do hash: variavel_hash[:nomeVariavel] = valor;
+        
