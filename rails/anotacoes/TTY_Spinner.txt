@@ -1,0 +1,23 @@
+# TTY Gems, é um conglomerado de gems que nos permite trabalhar as ações executadas no terminal.
+  Documentação: https://github.com/piotrmurach/tty-spinner
+
+  TTY_Spinner: É uma gem que nos permite trabalhar as ações executadas no terminal, personalizando o tempo de espera das ações, mostrando que está em execução e quando já foi concluído.
+    # Para utilizar, precisamos adicionar no arquivo gemFile, o nome da gem:
+      EX: gem "tty-spinner" e rodar o bundle
+
+    Exemplo de uso:
+      spinner = TTY::Spinner.new("[:spinner] Processando")
+      spinner.auto_spin
+        <codigo>
+      spinner.success("(concluído)")
+
+        Para melhorar nosso código, podemos criar uma função, que nos permite utilizar a gem spinner, se forma mais resumida, ao invéz de reescrever o código diversas vezes para cada bloco de código:
+          Ex: def spinner(msg)
+                spinner = TTY::Spinner.new("[:spinner] #{msg}")
+                spinner.auto_spin
+                yield
+                spinner.success("(concluído)")
+              end
+
+
+
