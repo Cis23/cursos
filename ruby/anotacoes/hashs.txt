@@ -1,0 +1,29 @@
+Métodos
+  store = Serve para adicionar mais uma chave ao hash.
+    EX: Hash.store(:chave, valor)
+  
+  merge = junta um hash com outro. Não modifica o hash principal
+    EX: Hash.merge({n1: 1, n2: 2, n3: 3})
+
+  has_key?() = Verifica se existe a chave passada por aparâmetro e retorna true ou false.
+    Ex: Hash.has_key?(:chave)
+
+  keys = Retorna todas as chaves do hash, sem seus valores.
+    Ex: Hash.keys 
+
+  value?() = Verifica se existe o valor passado por aparâmetro e retorna true ou false.
+    Ex: Hash.has_value?("Nome")
+
+  values = Retorna todas os valores do hash, sem as chaves.
+    Ex: Hash.values 
+
+  each = percorre dodo o Hash
+    Ex: Hash.each do |key,value|
+          puts value
+        end
+
+Atributos
+  size = Retorna quantas chaves ou atributos existe no hash
+    EX: Hash.size
+
+  
