@@ -38,39 +38,39 @@
 
 
 
-./rails/modulo_3/projeto-teste/.bundle
+./rails/modulo_3/projeto_teste/.bundle
 
 
-./rails/modulo_3/projeto-teste/db/*.sqlite3
-./rails/modulo_3/projeto-teste/db/*.sqlite3-*
+./rails/modulo_3/projeto_teste/db/*.sqlite3
+./rails/modulo_3/projeto_teste/db/*.sqlite3-*
 
 
-./rails/modulo_3/projeto-teste/log/*
-./rails/modulo_3/projeto-teste/tmp/*
-./rails/modulo_3/projeto-teste/!log/.keep
-./rails/modulo_3/projeto-teste/!tmp/.keep
+./rails/modulo_3/projeto_teste/log/*
+./rails/modulo_3/projeto_teste/tmp/*
+./rails/modulo_3/projeto_teste/!log/.keep
+./rails/modulo_3/projeto_teste/!tmp/.keep
 
 
-./rails/modulo_3/projeto-teste/tmp/pids/*
-./rails/modulo_3/projeto-teste/!tmp/pids/
-./rails/modulo_3/projeto-teste/!tmp/pids/.keep
+./rails/modulo_3/projeto_teste/tmp/pids/*
+./rails/modulo_3/projeto_teste/!tmp/pids/
+./rails/modulo_3/projeto_teste/!tmp/pids/.keep
 
 
-./rails/modulo_3/projeto-teste/storage/*
-./rails/modulo_3/projeto-teste/!storage/.keep
+./rails/modulo_3/projeto_teste/storage/*
+./rails/modulo_3/projeto_teste/!storage/.keep
 
-./rails/modulo_3/projeto-teste/public/assets
-./rails/modulo_3/projeto-teste/.byebug_history
+./rails/modulo_3/projeto_teste/public/assets
+./rails/modulo_3/projeto_teste/.byebug_history
 
 
-./rails/modulo_3/projeto-teste/config/master.key
+./rails/modulo_3/projeto_teste/config/master.key
 
-./rails/modulo_3/projeto-teste/public/packs
-./rails/modulo_3/projeto-teste/public/packs-test
-./rails/modulo_3/projeto-teste/node_modules
-./rails/modulo_3/projeto-teste/yarn-error.log
-./rails/modulo_3/projeto-teste/yarn-debug.log*
-./rails/modulo_3/projeto-teste/.yarn-integrity
+./rails/modulo_3/projeto_teste/public/packs
+./rails/modulo_3/projeto_teste/public/packs-test
+./rails/modulo_3/projeto_teste/node_modules
+./rails/modulo_3/projeto_teste/yarn-error.log
+./rails/modulo_3/projeto_teste/yarn-debug.log*
+./rails/modulo_3/projeto_teste/.yarn-integrity
 
 
 
