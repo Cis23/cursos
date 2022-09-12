@@ -1,0 +1,8 @@
+# O rakeTasks nos permite criar tasks do jeito que quisermos.
+  EX: <rails g task dev setup>  # rails g task <nameSpace> <nomeDaFunção>
+    #Podemos configurar toda a estrutura de desenvolvimento utilizando tasks, por exemplo excluindo e criando nosso DB, e criando migrações 
+      # Podemos utilizar um operador %x(), que nos permite rodar comandos de terminal linux através do ruby;
+        EX: %x(rails db:drop)
+            %x(rails db:create)
+            %x(rails db:migrate)
+            
