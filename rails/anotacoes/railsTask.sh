@@ -12,8 +12,3 @@
   rails db:drop db:create db:migrate db:seed # É possível escrever dessa forma também, inserindo as ações a serem realizada na mesma linha em ordem de execução
 
 
-
-
-  #Para criar nossas próprias tasks# 
-    rails g task <nomeTask>
-
