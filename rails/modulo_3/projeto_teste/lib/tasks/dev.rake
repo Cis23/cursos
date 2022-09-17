@@ -39,6 +39,8 @@ namespace :dev do
 
   def show_spinner(msg)
     spinner = TTY::Spinner.new("[:spinner] #{msg}")
+    spinner.auto_spin
+    sleep(1)
     yield
     spinner.success("(concluído)")
   end
