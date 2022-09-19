@@ -299,3 +299,768 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.9ms | Allocations: 11320)
 
 
+Started GET "/" for ::1 at 2022-09-16 10:16:25 -0300
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.3ms | Allocations: 7159)
+Completed 200 OK in 121ms (Views: 108.5ms | ActiveRecord: 0.0ms | Allocations: 10766)
+
+
+Started GET "/" for ::1 at 2022-09-16 10:16:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3298)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 3716)
+
+
+Started GET "/users" for ::1 at 2022-09-16 10:16:28 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 9409)
+Completed 200 OK in 51ms (Views: 39.8ms | ActiveRecord: 1.0ms | Allocations: 11401)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "users"[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "users"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (1.8ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "users"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "telephone" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220916131924"]]
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-09-19 09:29:07 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.3ms | Allocations: 7051)
+Completed 200 OK in 118ms (Views: 105.8ms | ActiveRecord: 0.0ms | Allocations: 9749)
+
+
+Started GET "/users" for ::1 at 2022-09-19 09:29:10 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 10044)
+Completed 200 OK in 63ms (Views: 40.3ms | ActiveRecord: 1.2ms | Allocations: 11931)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "action" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE "type_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "action" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (38.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "type_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "create" boolean DEFAULT 0, "update" boolean DEFAULT 0, "delete" boolean DEFAULT 0, "view" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220912170821)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220912170821"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "users" ADD "telephone" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220916131924"]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "create" boolean DEFAULT 0, "update" boolean DEFAULT 0, "delete" boolean DEFAULT 0, "view" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-19 14:35:45.534364"], ["updated_at", "2022-09-19 14:35:45.534364"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["created_at", "2022-09-19 14:35:47.399090"], ["updated_at", "2022-09-19 14:35:47.399090"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["created_at", "2022-09-19 14:35:47.420143"], ["updated_at", "2022-09-19 14:35:47.420143"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["created_at", "2022-09-19 14:35:47.440171"], ["updated_at", "2022-09-19 14:35:47.440171"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."create" = ? AND "type_users"."update" = ? AND "type_users"."delete" = ? AND "type_users"."view" = ? LIMIT ?[0m  [["description_name", "Administrador"], ["create", 1], ["update", 1], ["delete", 1], ["view", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."create" = ? AND "type_users"."update" = ? AND "type_users"."delete" = ? AND "type_users"."view" = ? LIMIT ?[0m  [["description_name", "Administrador"], ["create", 1], ["update", 1], ["delete", 1], ["view", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "type_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "telephone" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","age","cpf","created_at","updated_at","telephone")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at","telephone" FROM "users"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar NOT NULL, "last_name" varchar DEFAULT NULL, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","age","cpf","created_at","updated_at")
+                     SELECT "id","first_name","last_name","age","cpf","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220916131924"]]
+  [1m[36mTRANSACTION (35.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220912170821)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220912170821"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220912170821)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220912170821"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "users" ADD "telephone" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220916131924"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "create" boolean DEFAULT 0, "update" boolean DEFAULT 0, "delete" boolean DEFAULT 0, "view" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-19 14:43:56.749348"], ["updated_at", "2022-09-19 14:43:56.749348"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["created_at", "2022-09-19 14:43:58.587095"], ["updated_at", "2022-09-19 14:43:58.587095"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["created_at", "2022-09-19 14:43:58.606725"], ["updated_at", "2022-09-19 14:43:58.606725"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["created_at", "2022-09-19 14:43:58.623032"], ["updated_at", "2022-09-19 14:43:58.623032"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "type_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (74.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "criar" boolean DEFAULT 0, "atualizar" boolean DEFAULT 0, "deletar" boolean DEFAULT 0, "vizualizar" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220912170821)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar, "age" integer NOT NULL, "cpf" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220912170821"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFieldTelephoneFromUser (20220916131924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "telephone" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220916131924"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "criar" boolean DEFAULT 0, "atualizar" boolean DEFAULT 0, "deletar" boolean DEFAULT 0, "vizualizar" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (23.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-19 14:52:17.415090"], ["updated_at", "2022-09-19 14:52:17.415090"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Francisco"], ["last_name", "Farias"], ["age", 21], ["cpf", 53564451803], ["created_at", "2022-09-19 14:52:19.135344"], ["updated_at", "2022-09-19 14:52:19.135344"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Josinete"], ["last_name", "Farias"], ["age", 52], ["cpf", 92400833400], ["created_at", "2022-09-19 14:52:19.158596"], ["updated_at", "2022-09-19 14:52:19.158596"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = ? AND "users"."last_name" = ? AND "users"."age" = ? AND "users"."cpf" = ? LIMIT ?[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "age", "cpf", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joyce"], ["last_name", "Guimarães"], ["age", 21], ["cpf", 50244342857], ["created_at", "2022-09-19 14:52:19.177552"], ["updated_at", "2022-09-19 14:52:19.177552"]]
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:37:in `block (4 levels) in <main>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.3ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."vizualizar" = ? LIMIT ?[0m  [["description_name", "Administrador"], ["criar", 1], ["atualizar", 1], ["deletar", 1], ["vizualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.4ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "criar", "atualizar", "deletar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description_name", "Administrador"], ["criar", 1], ["atualizar", 1], ["deletar", 1], ["created_at", "2022-09-19 14:52:20.892722"], ["updated_at", "2022-09-19 14:52:20.892722"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (792.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."vizualizar" = ? LIMIT ?[0m  [["description_name", "Colaborador"], ["criar", 1], ["atualizar", 1], ["deletar", 0], ["vizualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.5ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "criar", "atualizar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description_name", "Colaborador"], ["criar", 1], ["atualizar", 1], ["created_at", "2022-09-19 14:52:21.694612"], ["updated_at", "2022-09-19 14:52:21.694612"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (133.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.1ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."vizualizar" = ? LIMIT ?[0m  [["description_name", "Visitante"], ["criar", 0], ["atualizar", 0], ["deletar", 0], ["vizualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.3ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description_name", "Visitante"], ["created_at", "2022-09-19 14:52:21.836383"], ["updated_at", "2022-09-19 14:52:21.836383"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+Started GET "/users" for ::1 at 2022-09-19 13:10:00 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 68.0ms | Allocations: 6860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 352.6ms | Allocations: 26083)
+Completed 200 OK in 387ms (Views: 354.4ms | ActiveRecord: 1.3ms | Allocations: 29899)
+
+
+Started GET "/" for ::1 at 2022-09-19 13:10:09 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3608)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 4695)
+
+
+Started GET "/users" for ::1 at 2022-09-19 13:10:10 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5072)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms | Allocations: 5528)
+
+
+Started GET "/users" for ::1 at 2022-09-19 13:10:58 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 5277)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms | Allocations: 6469)
+
+
+Started GET "/users" for ::1 at 2022-09-19 13:10:58 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4332)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms | Allocations: 4784)
+
+
+Started GET "/" for ::1 at 2022-09-19 13:10:59 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4424)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 5313)
+
+
+Started GET "/" for ::1 at 2022-09-19 13:11:07 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 317)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 3837)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 4947)
+
+
+Started GET "/type_users" for ::1 at 2022-09-19 13:11:09 -0300
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (0.3ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 107.8ms | Allocations: 11338)
+  Rendered layout layouts/application.html.erb (Duration: 108.2ms | Allocations: 11430)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 1.0ms | Allocations: 12919)
+
+
+  
+ActionView::Template::Error (undefined method `visualizar' for #<TypeUser id: 1, description_name: "Administrador", criar: true, atualizar: true, deletar: true, vizualizar: true, created_at: "2022-09-19 14:52:20.892722000 +0000", updated_at: "2022-09-19 14:52:20.892722000 +0000">
+Did you mean?  vizualizar
+               vizualizar?
+               vizualizar=):
+    21:         <td><%= type_user.criar %></td>
+    22:         <td><%= type_user.atualizar %></td>
+    23:         <td><%= type_user.deletar %></td>
+    24:         <td><%= type_user.visualizar %></td>
+    25:         <td><%= link_to 'Show', type_user %></td>
+    26:         <td><%= link_to 'Edit', edit_type_user_path(type_user) %></td>
+    27:         <td><%= link_to 'Destroy', type_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/type_users/index.html.erb:24
+app/views/type_users/index.html.erb:18
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "type_users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTypeUsers (20220919133425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "type_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description_name" varchar NOT NULL, "criar" boolean DEFAULT 0, "atualizar" boolean DEFAULT 0, "deletar" boolean DEFAULT 0, "visualizar" boolean DEFAULT 1, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220919133425"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/type_users" for ::1 at 2022-09-19 13:12:42 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (0.3ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 63.7ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.3ms | Allocations: 8536)
+Completed 200 OK in 125ms (Views: 105.2ms | ActiveRecord: 0.3ms | Allocations: 12359)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.4ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."vizualizar" = ? LIMIT ?[0m  [["description_name", "Administrador"], ["criar", 1], ["atualizar", 1], ["deletar", 1], ["vizualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+Started GET "/type_users" for ::1 at 2022-09-19 13:13:54 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1666)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/francisco/pessoal/cursos/rails/modulo_3/projeto_teste/public/packs
+[Webpacker] Hash: 0fe7dcd9d8f9ebcf52de
+Version: webpack 4.46.0
+Time: 1733ms
+Built at: 09/19/2022 1:13:59 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2e212f7c8f867558ac6e.js    121 KiB  application  [emitted] [immutable]  application
+js/application-2e212f7c8f867558ac6e.js.map    136 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2e212f7c8f867558ac6e.js js/application-2e212f7c8f867558ac6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 5727.7ms | Allocations: 9085)
+Completed 200 OK in 5757ms (Views: 5746.8ms | ActiveRecord: 0.2ms | Allocations: 12876)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."visualizar" = ? LIMIT ?[0m  [["description_name", "Administrador"], ["criar", 1], ["atualizar", 1], ["deletar", 1], ["visualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.5ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "criar", "atualizar", "deletar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description_name", "Administrador"], ["criar", 1], ["atualizar", 1], ["deletar", 1], ["created_at", "2022-09-19 16:14:18.651298"], ["updated_at", "2022-09-19 16:14:18.651298"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."visualizar" = ? LIMIT ?[0m  [["description_name", "Colaborador"], ["criar", 1], ["atualizar", 1], ["deletar", 0], ["visualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.4ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "criar", "atualizar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description_name", "Colaborador"], ["criar", 1], ["atualizar", 1], ["created_at", "2022-09-19 16:14:18.671124"], ["updated_at", "2022-09-19 16:14:18.671124"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Load (0.2ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users" WHERE "type_users"."description_name" = ? AND "type_users"."criar" = ? AND "type_users"."atualizar" = ? AND "type_users"."deletar" = ? AND "type_users"."visualizar" = ? LIMIT ?[0m  [["description_name", "Visitante"], ["criar", 0], ["atualizar", 0], ["deletar", 0], ["visualizar", 1], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTypeUser Create (0.4ms)[0m  [1m[32mINSERT INTO "type_users" ("description_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description_name", "Visitante"], ["created_at", "2022-09-19 16:14:18.689651"], ["updated_at", "2022-09-19 16:14:18.689651"]]
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:67:in `block (4 levels) in <main>'
+Started GET "/type_users" for ::1 at 2022-09-19 13:14:24 -0300
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (0.3ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 137.6ms | Allocations: 6138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.9ms | Allocations: 9236)
+Completed 200 OK in 145ms (Views: 141.4ms | ActiveRecord: 2.3ms | Allocations: 9727)
+
+
+Started GET "/type_users" for ::1 at 2022-09-19 14:35:30 -0300
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/type_users/index.html.erb:18
+  [1m[36mTypeUser Load (0.5ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 187.1ms | Allocations: 2006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 309.3ms | Allocations: 4978)
+Completed 200 OK in 477ms (Views: 337.0ms | ActiveRecord: 30.1ms | Allocations: 5353)
+
+
+Started GET "/type_users" for ::1 at 2022-09-19 14:35:33 -0300
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (1.4ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 4152)
+Completed 200 OK in 52ms (Views: 32.5ms | ActiveRecord: 1.4ms | Allocations: 4518)
+
+
+Started GET "/type_users/new" for ::1 at 2022-09-19 14:35:36 -0300
+Processing by TypeUsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/new.html.erb within layouts/application
+  Rendered type_users/_form.html.erb (Duration: 311.9ms | Allocations: 9386)
+  Rendered type_users/new.html.erb within layouts/application (Duration: 331.1ms | Allocations: 9794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 346.1ms | Allocations: 12792)
+Completed 200 OK in 382ms (Views: 347.6ms | ActiveRecord: 0.0ms | Allocations: 13973)
+
+

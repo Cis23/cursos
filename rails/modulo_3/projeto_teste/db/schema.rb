@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_12_170821) do
+ActiveRecord::Schema.define(version: 2022_09_19_133425) do
+
+  create_table "type_users", force: :cascade do |t|
+    t.string "description_name", null: false
+    t.boolean "criar", default: false
+    t.boolean "atualizar", default: false
+    t.boolean "deletar", default: false
+    t.boolean "visualizar", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
@@ -19,6 +29,7 @@ ActiveRecord::Schema.define(version: 2022_09_12_170821) do
     t.integer "cpf", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "telephone"
   end
 
 end

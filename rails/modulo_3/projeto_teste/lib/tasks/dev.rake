@@ -7,6 +7,7 @@ namespace :dev do
       show_spinner("Criando migração") { %x(rails db:migrate) }
 
       %x(rails dev:add_users)
+      %x(rails dev:add_typeUsers)
     end
   end
 
@@ -35,6 +36,36 @@ namespace :dev do
       ]
       users.each { |user| User.find_or_create_by!(user) }
     end   
+  end
+
+  desc "Adiciona tipos de usuários"
+  task add_typeUsers: :environment do
+    show_spinner("Cadastrando tipos de usuários") do
+      typeUsers = [
+        {
+          description_name: "Administrador",
+          criar: true,
+          atualizar: true,
+          deletar: true,
+          visualizar: true
+        },
+        {
+          description_name: "Colaborador",
+          criar: true,
+          atualizar: true,
+          deletar: false,
+          visualizar: true
+        },
+        {
+          description_name: "Visitante",
+          criar: false,
+          atualizar: false,
+          deletar: false,
+          visualizar: true
+        },
+      ]
+      typeUsers.each {|typeUser| TypeUser.find_or_create_by!(typeUser)}
+    end
   end
 
   def show_spinner(msg)
