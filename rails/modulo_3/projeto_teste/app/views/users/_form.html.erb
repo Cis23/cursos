@@ -12,25 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :first_name %>
+    <%= form.label "Nome" %>
     <%= form.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
+    <%= form.label "Sobrenome" %>
     <%= form.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
+    <%= form.label "Idade" %>
     <%= form.number_field :age %>
   </div>
 
   <div class="field">
-    <%= form.label :cpf %>
+    <%= form.label "CPF"%>
     <%= form.number_field :cpf %>
   </div>
 
+  <div class="field">
+    <%= form.label "Telefone" %>
+    <%= form.number_field :telephone %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
