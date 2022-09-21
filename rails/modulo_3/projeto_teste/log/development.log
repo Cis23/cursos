@@ -3471,3 +3471,207 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 6649)
 
 
+Started GET "/" for ::1 at 2022-09-21 09:42:14 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 582)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 7468)
+Completed 200 OK in 67ms (Views: 57.0ms | ActiveRecord: 0.0ms | Allocations: 10281)
+
+
+Started GET "/" for ::1 at 2022-09-21 09:42:16 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3355)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3875)
+
+
+Started GET "/users" for ::1 at 2022-09-21 09:42:18 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 12349)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 12449)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.1ms | Allocations: 14463)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home' for #<ActionView::Base:0x000000000086d8>):
+    33: <br>
+    34: 
+    35: <%= link_to 'Adicionar usuário', new_user_path %>
+    36: <%= link_to 'Voltar', home %>
+  
+app/views/users/index.html.erb:36
+Started GET "/" for ::1 at 2022-09-21 09:42:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3370)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3841)
+
+
+Started GET "/paths" for ::1 at 2022-09-21 09:42:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/paths"):
+  
+Started GET "/rails/info/routes?path=home" for ::1 at 2022-09-21 09:42:45 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"home"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2056)
+
+
+Started GET "/rails/info/routes?path=home" for ::1 at 2022-09-21 09:42:51 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"home"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 859)
+
+
+Started GET "/" for ::1 at 2022-09-21 09:43:03 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3804)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4963)
+
+
+Started GET "/" for ::1 at 2022-09-21 09:43:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3803)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 5003)
+
+
+Started GET "/users" for ::1 at 2022-09-21 09:43:45 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 6429)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 6656)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 8179)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for #<ActionView::Base:0x00000000009240>):
+    33: <br>
+    34: 
+    35: <%= link_to 'Adicionar usuário', new_user_path %>
+    36: <%= link_to 'Voltar', home_index_path %>
+  
+app/views/users/index.html.erb:36
+Started GET "/users" for ::1 at 2022-09-21 09:44:03 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6431)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 6514)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 7803)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000009650>):
+    33: <br>
+    34: 
+    35: <%= link_to 'Adicionar usuário', new_user_path %>
+    36: <%= link_to 'Voltar', home_path %>
+  
+app/views/users/index.html.erb:36
+Started GET "/users" for ::1 at 2022-09-21 09:45:07 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 6429)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6512)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms | Allocations: 7806)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000009b28>):
+    33: <br>
+    34: 
+    35: <%= link_to 'Adicionar usuário', new_user_path %>
+    36: <%= link_to 'Voltar', home_path %>
+  
+app/views/users/index.html.erb:36
+Started GET "/path" for ::1 at 2022-09-21 09:45:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/path"):
+  
+Started GET "/" for ::1 at 2022-09-21 09:45:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3818)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 4991)
+
+
+Started GET "/users" for ::1 at 2022-09-21 09:45:48 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5387)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.3ms | Allocations: 6542)
+
+
+Started GET "/" for ::1 at 2022-09-21 09:45:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3836)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4274)
+
+
+Started GET "/type_users" for ::1 at 2022-09-21 09:45:53 -0300
+Processing by TypeUsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering type_users/index.html.erb within layouts/application
+  [1m[36mTypeUser Load (0.5ms)[0m  [1m[34mSELECT "type_users".* FROM "type_users"[0m
+  ↳ app/views/type_users/index.html.erb:18
+  Rendered type_users/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 9197)
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 10784)
+
+
+Started GET "/users" for ::1 at 2022-09-21 09:45:56 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 5144)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.2ms | Allocations: 5603)
+
+
