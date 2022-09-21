@@ -10,9 +10,7 @@
     #OU podemos fazer assim:
       c.map(&:description) # Funciona somente em operações simples, quando so existe 1 parâmetro;
 
-
-  
-  #Pluck
+  #Pluck é a mesma coisa do map, porém com uma sintaxe mais curta
     c.pluck(:description)
 
     #Com mais de uma informação:
