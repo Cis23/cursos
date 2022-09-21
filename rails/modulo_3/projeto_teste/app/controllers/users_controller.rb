@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-
+  before_action :set_type_user_options, only: [:new, :create, :edit, :update]
+  before_action :set_arr_type_user, only: [:show, :index]
   # GET /users or /users.json
   def index
     @users = User.all
@@ -65,6 +66,13 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :age, :cpf, :telephone)
+      params.require(:user).permit(:first_name, :last_name, :age, :cpf, :telephone, :type_user_id)
+    end
+
+    def set_arr_type_user
+      @type_user_arr = TypeUser.all
+    end
+    def set_type_user_options
+      @type_users_options = TypeUser.all.pluck(:description_name, :id)
     end
 end

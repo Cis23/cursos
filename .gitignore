@@ -51,7 +51,7 @@
 ./rails/modulo_3/projeto_teste/!tmp/.keep
 
 
-./rails/modulo_3/projeto_teste/tmp/pids/*
+./rails/modulo_3/projeto_teste/tmp/*
 ./rails/modulo_3/projeto_teste/!tmp/pids/
 ./rails/modulo_3/projeto_teste/!tmp/pids/.keep
 

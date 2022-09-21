@@ -20,5 +20,14 @@
   <%= @user.cpf %>
 </p>
 
+<p>
+  <strong>Telefone:</strong>
+  <%= @user.telephone %>
+</p>
+
+<p>
+  <strong>Tipo de usuário:</strong>
+  <%= set_type_user(@type_user_arr,@user) %>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

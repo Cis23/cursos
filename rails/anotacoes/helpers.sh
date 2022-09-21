@@ -10,3 +10,6 @@
 #documentação: https:://api.rubyonrails.org/classes/ActiveonView/Helpers/AssetTagHelper.html#method-i-image_tag
 # <%= image_tag "src ou url da imagem", <atributos como size: 25x25, width: 25> %>
 <%= image_tag coin.url_image, size: 25x25 %>
+
+#Select 
+<%= form.select("mining_type_ id", MiningType.all.collect {|mining_type| [mining_type.description, mining_type.id]}, {include_blank: "Selecione"}, required: ture) %>

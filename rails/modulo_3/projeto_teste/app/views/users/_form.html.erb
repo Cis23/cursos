@@ -35,7 +35,12 @@
     <%= form.label "Telefone" %>
     <%= form.number_field :telephone %>
   </div>
-  <div class="actions">
+  <div class="field">
+    <%= form.label "Tipo de usuário" %>
+    <%= form.select("type_user_id",  @type_users_options, {include_blank: "Selecione"}, required: true) %>
+  </div>
+ 
+  <div class="actions"> 
     <%= form.submit %>
   </div>
 <% end %>
