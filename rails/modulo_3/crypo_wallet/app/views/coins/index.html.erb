@@ -10,6 +10,7 @@
       <th>Nome</th>
       <th>Sigla</th>
       <th>Imagem</th>
+      <th>Tipe de mineração</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,13 @@
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td> <%= image_tag coin.url_image, width: 80, height: 60%> </td>
+        <td>
+          <% @miningType.map do |mt| %>
+            <% if(mt.id == coin.mining_type_id) %>
+              <%= mt.description %>
+            <% end %>
+          <% end %>
+        </td>
         <td><%= link_to 'Exibir', coin %></td>
         <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
         <td><%= link_to 'Deletar', coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

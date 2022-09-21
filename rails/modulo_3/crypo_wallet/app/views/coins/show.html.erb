@@ -15,5 +15,13 @@
   <%= image_tag @coin.url_image, width: 80, height: 50%>
 </p>  
 
+<p>
+  <strong>Tipo de mineração:</strong>
+  <% @miningType.map do |mt| %>
+    <% if(mt.id == @coin.mining_type_id) %>
+      <%= mt.description %>
+    <% end %>
+  <% end %>
+</p>
 <%= link_to 'Editar', edit_coin_path(@coin) %> |
 <%= link_to 'Voltar', coins_path %>
