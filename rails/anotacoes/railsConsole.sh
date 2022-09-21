@@ -2,9 +2,8 @@
 # Ele permite executar o código ruby, inclusive fazendo operações com o banco de dados da aplicação. 
 
 #Insatalação do pry-rails
-  # 1 - No arquivo gemFile gem digite: 'pry-rails'
+  # 1 - No arquivo gemfile digite: 'pry-rails'
   # 2- rode o comando bundle install;
-
 
 #Trabalhando com models via Rails console
   # Método where() => retorna todos os elementos que de match com a opção passada por parâmetro
