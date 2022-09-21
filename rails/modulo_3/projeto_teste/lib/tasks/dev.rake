@@ -6,8 +6,8 @@ namespace :dev do
       show_spinner("Criando DB") { %x(rails db:create) }
       show_spinner("Criando migração") { %x(rails db:migrate) }
 
-      %x(rails dev:add_users)
       %x(rails dev:add_typeUsers)
+      %x(rails dev:add_users)
     end
   end
 
@@ -19,19 +19,22 @@ namespace :dev do
           first_name: "Francisco",
           last_name: "Farias",
           age: 21,
-          cpf: 53564451803
+          cpf: 53564451803,
+          type_user: TypeUser.find_by(id: 1)
         },
         {
           first_name: "Josinete",
           last_name: "Farias",
           age: 52,
-          cpf: 92400833400
+          cpf: 92400833400,
+          type_user: TypeUser.find_by(id: 2)
         },
         {
           first_name: "Joyce",
           last_name: "Guimarães",
           age: 21,
-          cpf: 50244342857
+          cpf: 50244342857,
+          type_user: TypeUser.find_by(id: 3)
         }
       ]
       users.each { |user| User.find_or_create_by!(user) }

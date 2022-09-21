@@ -7,6 +7,12 @@
 
 
 #Trabalhando com models via Rails console
+  # Método where() => retorna todos os elementos que de match com a opção passada por parâmetro
+    Model.where(column: value)
+
+  # Método find_by() => Retorna somente um elemento, de acordo com oq for passado como parâmetro.
+    Model.find_by(id: 1)    
+
   # Método first => retorna o primeiro dado do banco de dados;
     Model.first 
 
