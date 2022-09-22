@@ -5,11 +5,10 @@
 ./rails/modulo_3/crypo_wallet/db/*.sqlite3-*
 
 
-./rails/modulo_3/crypo_wallet/log/*
 ./rails/modulo_3/crypo_wallet/tmp/*
+./rails/modulo_3/crypo_wallet/log/*
 ./rails/modulo_3/crypo_wallet/!log/.keep
 ./rails/modulo_3/crypo_wallet/!tmp/.keep
-
 
 ./rails/modulo_3/crypo_wallet/tmp/pids/*
 ./rails/modulo_3/crypo_wallet/!tmp/pids/
@@ -44,7 +43,7 @@
 ./rails/modulo_3/projeto_teste/db/*.sqlite3
 ./rails/modulo_3/projeto_teste/db/*.sqlite3-*
 
-
+./rails/modulo_3/projeto_teste/tmp
 ./rails/modulo_3/projeto_teste/log/*
 ./rails/modulo_3/projeto_teste/tmp/*
 ./rails/modulo_3/projeto_teste/!log/.keep
@@ -54,6 +53,7 @@
 ./rails/modulo_3/projeto_teste/tmp/*
 ./rails/modulo_3/projeto_teste/!tmp/pids/
 ./rails/modulo_3/projeto_teste/!tmp/pids/.keep
+./rails/modulo_3/projeto_teste/!tmp/pids/.server.pid
 
 
 ./rails/modulo_3/projeto_teste/storage/*
