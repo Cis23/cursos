@@ -1,0 +1,8 @@
+pt-BR:
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    destroy: "Deletar"
+
+  confirmacao:
+    deletar: "Deseja realmente excluir ?"

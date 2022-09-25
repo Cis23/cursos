@@ -27,7 +27,7 @@
 
 <p>
   <strong>Tipo de usuário:</strong>
-  <%= set_type_user(@type_user_arr,@user) %>
+  <%= @user.type_user.description_name %>
 </p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

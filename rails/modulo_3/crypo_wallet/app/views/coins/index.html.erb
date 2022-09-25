@@ -28,9 +28,9 @@
             <% end %>
           <% end %>
         </td>
-        <td><%= link_to 'Exibir', coin %></td>
-        <td><%= link_to 'Editar', edit_coin_path(coin) %></td>
-        <td><%= link_to 'Deletar', coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to t('links.show'), coin %></td>
+        <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
+        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: t('confirmacao.deletar') } %></td>
       </tr>
     <% end %>
   </tbody>

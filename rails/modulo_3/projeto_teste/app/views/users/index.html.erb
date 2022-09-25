@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-
 <table>
   <thead>
     <tr>
@@ -11,6 +10,7 @@
       <th><abbr tittle="Certidão de Pessoal Física">CPF</abbr></th>
       <th>Telefone</th>
       <th>Tipo de usuário</th>
+      <th>Tipo teste</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,10 +23,10 @@
         <td><%= user.age %></td>
         <td><%= user.cpf %></td>
         <td><%= user.telephone %></td>
-        <td><%= set_type_user(@type_user_arr,user) %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.type_user.description_name %></td>
+        <td><%= link_to t('links.show'), user %></td>
+        <td><%= link_to t('links.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('links.destroy'), user, method: :delete, data: { confirm: t('confirmacao.deletar') } %></td>
       </tr>
     <% end %>
   </tbody>

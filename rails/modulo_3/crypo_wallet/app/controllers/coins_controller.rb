@@ -76,9 +76,7 @@ class CoinsController < ApplicationController
     def set_miningType
       @miningType = MiningType.all
       # arr = @miningType.map do |mt| if(mt.id == 2)
-      
-      # render json:[vl: @miningType]
-    end
+    end 
 
     def set_mining_type_options
       @mining_type_options = MiningType.all.pluck(:description, :id)

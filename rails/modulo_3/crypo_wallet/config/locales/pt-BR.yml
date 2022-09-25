@@ -1,0 +1,9 @@
+pt-BR: 
+  bem_vindo: "Olá, Seja bem vindo ao nosso site"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+  confirmacao:
+    deletar: "Você deseja realmente excluir ?"
+    

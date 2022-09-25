@@ -39,7 +39,6 @@
 
 ./rails/modulo_3/projeto_teste/.bundle
 
-
 ./rails/modulo_3/projeto_teste/db/*.sqlite3
 ./rails/modulo_3/projeto_teste/db/*.sqlite3-*
 
@@ -51,9 +50,10 @@
 
 
 ./rails/modulo_3/projeto_teste/tmp/*
-./rails/modulo_3/projeto_teste/!tmp/pids/
+./rails/modulo_3/projeto_teste/!tmp/pids/*
 ./rails/modulo_3/projeto_teste/!tmp/pids/.keep
-./rails/modulo_3/projeto_teste/!tmp/pids/.server.pid
+./rails/modulo_3/projeto_teste/tmp/pids/server.pid
+rails/modulo_3/projeto_teste/tmp/miniprofiler/*
 
 
 ./rails/modulo_3/projeto_teste/storage/*
