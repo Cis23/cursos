@@ -15,5 +15,32 @@ COMO UTILIZAR:
   Dentro de config/locale criamos uma arquivo correspondente a linguagem que queremos utilizar e colocamos as traduções e etc.
 
 
-Tradução direta para o model.
-  
+Tradução direta para o model
+  Ao configurar nosso arquivo pt-BR_models da seguinte forma: 
+  pt-BR":
+    activerecord: 
+      models:
+        coin: 
+          one: Moeda
+          other: Moedas
+        mining_type: 
+          one: Tipo de Mineração
+          other: Tipos de Mineração
+      attributes:
+        coin:
+          id: Código
+          description: Descrição
+          acronym: Sigla
+          url_image: URL da Imagem
+          mining_type: Tipo de Mineração
+          mining_type_id: ID do Tipo de Mineração
+          updated_at: Atualizado em
+          created_at: Criado em
+        mining_type: 
+          id: Código
+          description: Descrição
+          acronym: Sigla
+          updated_at: Atualizado em
+          created_at: Criado em
+
+  Podemos utilizar o método: human_attribute_name(:nome_campo) para realizar a tradução de acordo com a configuração acima. 
