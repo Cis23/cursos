@@ -1,0 +1,12 @@
+HTTP 
+  Quando realizamos uma raquisição HTTP o servidor a qual solucitamos por padrão, não tem conhecimento de quem fez a requisição e o que ocorreu após o pedido, ou seja, ele não guarda um histórico da requisição, o que caracteriza como stetefull.
+  
+  Já a statelass com a utilização de cookies e sessions resolve esse problema de histórico, salvandos algumas informações necessárias no navegador, para facilitar o uso do HTTP 
+
+COOKIES
+  Utilizamos o cookie quando precisamos salvar alguma informação relevante para a navegação do usuário ou funcionamento da aplicação, no navegador para serem utilizados em requisição HTTP
+    No rails podemos utilizar da seguinte forma (pluralizada): < cookies[:chave] = valor >
+  
+SESSIONS 
+  Tem um funcionamento semelhante ao cookie porém seus as informações servem exclusivamente ao servidor, salvando em cache. 
+    Podendo ser utilizada da seguinte forma (singular): < session[:chave] = valor >
